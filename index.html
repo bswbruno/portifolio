@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Bruno Santos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo-mobile-top">
+                <img src="image/icon-coder.png" alt="Coder Icon">
+            </div> <!-- logo-mobile-top -->
+
+            <div class="logo">
+                <img src="image/MINHA LOGO NOBRU.DEV/MINHA LOGO NOBRU.DEV sem fundo letra white.png" alt="Logo Nobru.Dev">
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#eu-sou">INICIO</a></li>
+                    <li class="nav-item"><a href="#sobre-mim">SOBRE</a></li>
+                    <li class="nav-item"><a href="#menu-projetos">PORTIFÓLIO</a></li>
+                    <li class="nav-item"><a href="#experiencias">EXPERIÊNCIASs</a></li>
+                </ul>
+            </div> <!-- nav-list -->
+
+            <div class="botao-contato">
+                <a href="#"><button>CONTATO</button></a>
+            </div> <!-- botao-contato -->
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuDrop(this)" class="icon">
+                    <img src="image/barra-de-menu.png" alt="Menu Icon">
+                </button>
+            </div> <!-- mobile-menu-icon -->
+        </nav> <!-- nav-bar -->
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item nav-link"><a href="#eu-sou">INICIO</a></li>
+                <li class="nav-item nav-link"><a href="#sobre-mim">SOBRE</a></li>
+                <li class="nav-item nav-link"><a href="#menu-projetos">PORTIFÓLIO</a></li>
+                <li class="nav-item nav-link"><a href="#experiencias">EXPERIÊNCIAS</a></li>
+            </ul>
+
+            <div class="contato-botao">
+                <a href="#"><button>CONTATO</button></a>
+            </div>
+        </div> <!-- mobile-menu -->
+    </header>
+
+    <div class="center">
+        <section class="inicio">
+            <div class="eu-sou" id="eu-sou">
+                <h4>Eu sou um,</h4>
+                <h2>Desenvolvedor</h2>
+                <h1 class="text-animado">Front-End</h1>
+            </div>
+            <a href="#menu-projetos">
+                <div>
+                    <input type="button" id="botao-projetos" value="PROJETOS">
+                </div>
+            </a>
+            <div class="icon-coder">
+                <img src="image/icon-coder.png" alt="Icon Coder">
+            </div>
+        </section> <!-- inicio -->
+
+        <section class="sobre-mim" id="sobre-mim">
+            <div class="img-sobre-mim">
+                <img src="image/foto-perfil-yellow.png" alt="Foto de perfil">
+            </div>
+            <div class="titulo-sobre-mim">
+                <h1>SOBRE MIM</h1>
+            </div>
+            <p>Olá, meu nome é Bruno dos Santos, formado em Análise e Desenvolvimento de Sistemas. Trago uma combinação única de habilidades ao unir meu conhecimento técnico com uma sólida base em design gráfico, utilizando
+                ferramentas como Figma e Photoshop. <br><br>
+                Meu interesse pela área de desenvolvimento web motiva-me a buscar desafios inovadores e projetos criativos. Estou disposto a contribuir com meu conjunto de habilidades na criação de soluções envolventes e funcionais para o mundo online.
+            </p>
+        </section>
+
+        <section class="projetos" id="menu-projetos">
+            <h1>PROJETOS ACADÊMICOS E PESSOAIS</h1>
+            <div class="container">
+                
+                <div class="card">
+                    <a href="https://wanderleybruno.github.io/portal-vitai/index.html" target="_blank">
+                        <p>Plataforma Colaborativa</p>
+                       
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://wanderleybruno.github.io/projeto-android/" target="_blank">
+                        <p>Curiosidades da Tecnologia</p>
+                        
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://wanderleybruno.github.io/bia-estetica/" target="_blank">
+                        <p> Landing Page</p>
+                        
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="https://wanderleybruno.github.io/loja-car/" target="_blank">
+                        <p> Loja de Carro</p>
+                        
+                    </a>
+                </div>
+
+            </div> <!-- container -->
+        </section> <!-- projetos -->
+
+        <section class="experiencias" id="experiencias">
+            <div class="container">
+                <h1>Experiências</h1>
+                <div class="icons-redes">
+                    <div class="icon-rede">
+                        <img src="image/icon-Html 5.png" alt="HTML Icon">
+                        <p>HTML</p>
+                    </div>
+
+                    <div class="icon-rede">
+                        <img src="image/icon-CSS3.png" alt="CSS3 Icon">
+                        <p>CSS3</p>
+                    </div>
+
+                    <div class="icon-rede">
+                        <img src="image/icon-JavaScript.png" alt="JavaScript Icon">
+                        <p>JavaScript</p>
+                    </div>
+
+                    <div class="icon-rede">
+                        <img src="image/icon-react.png" alt="React Icon">
+                        <p>React</p>
+                    </div>
+
+                    <div class="icon-rede">
+                        <img src="image/icon-Figma.png" alt="Figma Icon">
+                        <p>Figma</p>
+                    </div>
+
+                    <div class="icon-rede">
+                        <img src="image/icon-Adobe Photoshop.png" alt="Photoshop Icon">
+                        <p>Photoshop</p>
+                    </div>
+                </div> <!-- icons-redes -->
+            </div> <!-- container -->
+        </section> <!-- experiencias -->
+    </div> <!-- center -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Endereço: Rua Exemplo, 123, Cidade, Estado, CEP</p>
+                <p>WhatsApp: (21) 9659-69650</p>
+                <p>Telefone: (21) 9804-88310</p>
+                <p>E-mail: <a href="mailto:wanderley.bruno@gmail.com" target="_blank">wanderley.bruno@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <p><a href="https://github.com/wanderleybruno" target="_blank">Github</a></p>
+                <p><a href="https://www.instagram.com/nobru_dev/" target="_blank">Instagram</a></p>
+                <p><a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">LinkedIn</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Assine nossa newsletter para receber novidades.</p>
+                <form action="#">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+
+            <div class="footer-section">
+                <p>© 2024 Nobru.Dev. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">Bruno dos Santos / Nobru.Dev</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
