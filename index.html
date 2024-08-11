@@ -29,13 +29,26 @@
                     <li class="nav-item"><a href="#eu-sou">INICIO</a></li>
                     <li class="nav-item"><a href="#sobre-mim">SOBRE</a></li>
                     <li class="nav-item"><a href="#menu-projetos">PORTIFÓLIO</a></li>
-                    <li class="nav-item"><a href="#experiencias">EXPERIÊNCIASs</a></li>
+                    <li class="nav-item"><a href="#experiencias">EXPERIÊNCIAS</a></li>
                 </ul>
             </div> <!-- nav-list -->
 
+           
+
             <div class="botao-contato">
-                <a href="#"><button>CONTATO</button></a>
+                <button onclick="abrirModal()">CONTATO</button>
             </div> <!-- botao-contato -->
+
+                        
+            <div id="contato-modal" class="modal"> <!-- modal -->  
+                <div class="modal-content">
+                    <span class="close-button" onclick="fecharModal()">&times;</span>
+                    <h2>Entre em contato</h2>
+                    <p>WhatsApp: <a href="https://wa.me/5521965969650" target="_blank">(21) 9659-69650</a></p>
+                    <p>Telefone: (21) 9804-88310</p>
+                    <p>E-mail: <a href="mailto:wanderley.bruno@gmail.com" target="_blank">wanderley.bruno@gmail.com</a></p>
+                </div>
+            </div> <!-- modal -->
 
             <div class="mobile-menu-icon">
                 <button onclick="menuDrop(this)" class="icon">
@@ -185,11 +198,11 @@
                 <p><a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">LinkedIn</a></p>
             </div>
             <div class="footer-section">
-                <h4>Newsletter</h4>
-                <p>Assine nossa newsletter para receber novidades.</p>
+                <h4>Entre em Contato</h4>
+                
                 <form action="#">
                     <input type="email" placeholder="Seu e-mail">
-                    <button type="submit">Assinar</button>
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
 
