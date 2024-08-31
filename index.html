@@ -33,16 +33,13 @@
                 </ul>
             </div> <!-- nav-list -->
 
-           
-
             <div class="botao-contato">
-                <button onclick="abrirModal()">CONTATO</button>
+                <button id="btn-abrir-modal">CONTATO</button>
             </div> <!-- botao-contato -->
 
-                        
             <div id="contato-modal" class="modal"> <!-- modal -->  
                 <div class="modal-content">
-                    <span class="close-button" onclick="fecharModal()">&times;</span>
+                    <span class="close-button" id="btn-fechar-modal">&times;</span>
                     <h2>Entre em contato</h2>
                     <p>WhatsApp: <a href="https://wa.me/5521965969650" target="_blank">(21) 9659-69650</a></p>
                     <p>Telefone: (21) 9804-88310</p>
@@ -51,7 +48,7 @@
             </div> <!-- modal -->
 
             <div class="mobile-menu-icon">
-                <button onclick="menuDrop(this)" class="icon">
+                <button id="menu-button" class="icon">
                     <img src="image/barra-de-menu.png" alt="Menu Icon">
                 </button>
             </div> <!-- mobile-menu-icon -->
@@ -66,7 +63,7 @@
             </ul>
 
             <div class="contato-botao">
-                <a href="#"><button>CONTATO</button></a>
+                <button id="btn-mobile-contato">CONTATO</button>
             </div>
         </div> <!-- mobile-menu -->
     </header>
@@ -104,32 +101,39 @@
         <section class="projetos" id="menu-projetos">
             <h1>PROJETOS ACADÊMICOS E PESSOAIS</h1>
             <div class="container">
-                
-                <div class="card">
+                <div class="card" id="cards" onmouseover="virar()" onmouseout="desvirar()">
                     <a href="https://bswbruno.github.io/plataforma-colaborativa/" target="_blank">
                         <p>Plataforma Colaborativa</p>
-                       
                     </a>
                 </div>
 
                 <div class="card">
                     <a href="https://bswbruno.github.io/projeto-android/" target="_blank">
                         <p>História do Android</p>
-                        
                     </a>
                 </div>
 
                 <div class="card">
                     <a href="https://bswbruno.github.io/bia-estetica/" target="_blank">
-                        <p> Landing Page / Estética</p>
-                        
+                        <p>Landing Page / Estética</p>
                     </a>
                 </div>
 
                 <div class="card">
                     <a href="https://bswbruno.github.io/loja-carro/" target="_blank">
-                        <p> Loja de Carro</p>
-                        
+                        <p>Loja de Carro</p>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" target="_blank">
+                        <p>Em breve...</p>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#" target="_blank">
+                        <p>Em breve...</p>
                     </a>
                 </div>
 
@@ -139,6 +143,7 @@
         <section class="experiencias" id="experiencias">
             <div class="container">
                 <h1>Experiências</h1>
+                
                 <div class="icons-redes">
                     <div class="icon-rede">
                         <img src="image/icon-Html 5.png" alt="HTML Icon">
@@ -175,19 +180,20 @@
     </div> <!-- center -->
 
     <footer>
-        <div class="container">
+        <div class="container footer-content">
             <div class="footer-section">
                 <h4>Contato</h4>
-                <p>Endereço: Estrada Santa Eugênia, 2400 - Santa cruz, Rio de Janeiro</p>
-                <p>WhatsApp: (21) 9659-69650</p>
+                <p>Endereço: Estrada Santa Eugênia, 2400 - Santa Cruz, Rio de Janeiro</p>
+                <p>WhatsApp: <a href="https://wa.me/5521965969650" target="_blank">(21) 9659-69650</a></p>
                 <p>Telefone: (21) 9804-88310</p>
                 <p>E-mail: <a href="mailto:wanderley.bruno@gmail.com" target="_blank">wanderley.bruno@gmail.com</a></p>
             </div>
             <div class="footer-section">
                 <h4>Navegação</h4>
                 <ul>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre-mim">Sobre Mim</a></li>
+                    <li><a href="#menu-projetos">Portfólio</a></li>
+                    <li><a href="#experiencias">Experiências</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
@@ -199,21 +205,20 @@
             </div>
             <div class="footer-section">
                 <h4>Entre em Contato</h4>
-                
                 <form action="#">
-                    <input type="email" placeholder="Seu e-mail">
+                    <input type="email" placeholder="Seu e-mail" required>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
-
-            <div class="footer-section">
-                <p>© 2024 Nobru.Dev. Todos os direitos reservados.</p>
-                <p>Desenvolvido por <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">Bruno dos Santos / Nobru.Dev</a></p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Nobru.Dev. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">Bruno dos Santos / Nobru.Dev</a></p>
         </div>
     </footer>
+    
 
-    <script src="script/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

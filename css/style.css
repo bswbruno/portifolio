@@ -6,37 +6,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans",sans-serif;
-    
+    font-family: "Open Sans", sans-serif;
 }
-
-
 
 :root {
     --font-principal: "IBM Plex Mono", monospace;
 }
 
-
 body {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #080c31;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 .center {
     max-width: 1100px;
-    
-    
 }
 
 header {
-    
     width: 100%;
-
 }
+
+
 
 .nav-bar {
     display: flex;
@@ -45,8 +39,6 @@ header {
 }
 
 .logo img {
-    display: flex;
-    align-items: center;
     width: 120px;
     margin-top: 6px;
 }
@@ -54,15 +46,12 @@ header {
 .nav-list {
     display: flex;
     align-items: center;
-
-    
 }
 
 .nav-list ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    
 }
 
 .nav-list ul li a {
@@ -76,7 +65,7 @@ header {
 
 .mobile-menu-icon {
     display: none;
-} 
+}
 
 .mobile-menu {
     display: none;
@@ -89,11 +78,11 @@ header {
     background-color: #535EC2;
     border: none;
     color: white;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .botao-contato button:hover {
     transform: scale(0.95);
-    transition: 0.3s;
     background-color: #7984e9;
     cursor: pointer;
 }
@@ -118,21 +107,21 @@ header {
     align-items: center;
 }
 
+.modal.show { /* Adicione esta classe ao abrir o modal */
+    display: flex; /* Modificado de block para flex para centralizar o modal */
+}
+
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
     border-radius: 10px;
-    
 }
 
 .modal a {
     text-decoration: none;
-    text-decoration: none;
-    
 }
 
 .close-button {
@@ -148,23 +137,15 @@ header {
     color: black;
 }
 
-
-
-
 section.inicio {
     display: flex;
-    
-    
- 
 }
 
 .eu-sou {
-    
     color: white;
     flex-direction: column;
-    margin: 70px 137px ;
+    margin: 70px 137px;
     line-height: 79px;
-    
 }
 
 .eu-sou h4 {
@@ -181,26 +162,21 @@ section.inicio {
 }
 
 .eu-sou h1 {
-    font-size: 100px ;
+    font-size: 100px;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
-    white-space: nowrap; /* Impede a quebra de linha */
-    
+    white-space: nowrap;
 }
 
 .icon-coder {
     position: relative;
     padding: 60px 0;
     margin: 0 550px;
-    
-  
 }
 
 .icon-coder img {
     width: 250px;
-    
     margin: 0 -620px;
- 
 }
 
 .logo-mobile-top {
@@ -211,24 +187,19 @@ section.inicio {
     width: 165px;
     height: 40px;
     margin: 327px -670px;
-    
     border-radius: 7px;
-    background-color:#535EC2 ;
+    background-color: #535EC2;
     color: white;
     font-weight: 700;
     border: none;
     letter-spacing: 2px;
-    
-    
-    
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #botao-projetos:hover {
     transform: scale(0.95);
-    transition: 0.3s;
     background-color: #7984e9;
     cursor: pointer;
-
 }
 
 .sobre-mim {
@@ -237,9 +208,6 @@ section.inicio {
     margin: -190px auto;
     position: relative;
     padding: 0 5%;
-    
-    
-    
 }
 
 .sobre-mim h1 {
@@ -250,25 +218,18 @@ section.inicio {
     font-family: "IBM Plex Mono", monospace;
     margin: -390px 360px;
     position: absolute;
-    
-    
 }
 
-
-
-.img-sobre-mim img  {
+.img-sobre-mim img {
     margin: 110px 90px;
-    
-    
 }
 
 .sobre-mim p {
     color: white;
-    text-align: center;
+    text-align: justify;
     font-size: 18px;
     line-height: 30px;
     font-family: "IBM Plex Mono", monospace;
-    text-align: justify;
     width: 60%;
     max-width: 1000px;
     margin: -292px 360px;
@@ -277,132 +238,110 @@ section.inicio {
 .projetos h1 {
     color: white;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: normal;
     text-align: center;
     margin-top: 450px;
 }
 
-
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centralizar os cards na horizontal */
+    justify-content: center;
     padding: 20px;
-  }
+}
 
-
-
- 
-  .card {
-    width: 300px; /* Largura fixa para os cards */
+.card {
+    width: 300px;
     height: 300px;
     background-color: #f0f0f0;
     border-radius: 8px;
-    margin: 10px; /* Espaçamento entre os cards */
-    
+    margin: 10px;
     text-align: center;
-    
-  }
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
 
-  .card:hover {
+.card:hover {
     transform: scale(0.99);
-    transition: 0.2s;
     background-color: #383941dc;
     border: 5px solid rgb(97, 201, 233);
     box-shadow: 1px 1px 25px 2px rgba(132, 226, 255, 0.514);
-    
-    
-  }
+}
 
- .card p:hover {
-    color: white;
-    cursor: pointer;
- }
-
-
-  .card p {
-    
-    margin: 0; /* Remover margem padrão do parágrafo */
+.card p {
+    margin: 0;
     color: rgb(0, 0, 0);
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    
-  }
+}
 
+.card p:hover {
+    color: white;
+    cursor: pointer;
+}
 
-
-
-
-  .card a {
+.card a {
     text-decoration: none;
-    
-  }
+}
 
-  
-
-  .experiencias h1 {
-    
+.experiencias h1 {
     color: white;
     font-family: "IBM Plex Mono", monospace;
     font-size: 3rem;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
-    display: block;
     margin: 0 104px;
-    
-  }
+}
 
- section.experiencias {
+section.experiencias {
     margin: 50px 0;
     color: white;
     text-align: center;
+}
 
- }
-
- .container .icons-redes {
+.container .icons-redes {
     margin-top: 100px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-wrap: wrap;
-    
- }
+}
 
- .container .icon-rede {
+.container .icon-rede {
     padding: 30px;
- }
+}
 
-
- footer {
-    background-color:#535EC2;
+footer {
+    background-color: #5677e0;
     color: #fff;
     padding: 20px 0;
     width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
 
 .footer-section {
-    
     flex: 1;
-    margin: 50px;
-    width: 100%;
+    margin: 10px;
+    min-width: 200px;
 }
 
 .footer-section h4 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
     margin-bottom: 10px;
-    font-size: 1.2em;
 }
 
-.footer-section p, .footer-section a {
-    color: #bbb;
-    font-size: 0.9em;
+.footer-section a {
+    color: #ddd;
     text-decoration: none;
 }
 
@@ -410,428 +349,134 @@ section.inicio {
     text-decoration: underline;
 }
 
-.footer-section form {
-    display: flex;
-    flex-direction: column;
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #204099;
+    color: #ddd;
 }
 
-.footer-section input[type="email"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
+.footer-bottom p {
+    margin: 5px 0;
 }
 
-.footer-section button {
-    
-    padding: 10px;
-    background-color: #555;
-    border: none;
-    border-radius: 5px;
+.footer-bottom a {
     color: #fff;
-    cursor: pointer;
+    text-decoration: none;
 }
 
-.footer-section button:hover {
-    background-color: #777;
-}
-
-.footer-section ul {
-        
-    list-style: none;
+.footer-bottom a:hover {
+    text-decoration: underline;
 }
 
 
-
-
-@media screen and (max-width:768px) {
-
-    html {
-        overflow-x: hidden;
-    }
-
-    header {
-        width: 100%;
-    }
-    
-
-    .logo img {
-         width: 120px;
-         margin-top: 5px;
-         margin-left: -20px;
-         
-    }
-
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
     .nav-bar {
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem 3rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .nav-item {
-        display: none;
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .botao-contato button {
-        display: none;
-        
+    .nav-item a {
+        margin: 5px 0;
     }
 
-   
-    .contato-botao button {
-        background-color: #7984e9;
-        width: 50%;
-        padding: 10px;
-        border-radius: 25px;
-        display: block;
-        margin: 50px auto;
-        border: none;
-        
+    .mobile-menu {
+        display: block; /* Mostra o menu móvel em tablets */
     }
 
-    .contato-botao button a {
-        font-size: 1.2rem;
+    .section .projetos h1 {
         color: white;
-        text-decoration: none;
-        font-weight: 700;
-        letter-spacing: 5px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 2rem;
+        font-weight: normal;
+        text-align: center;
+        
     }
-    
 
- 
-    .mobile-menu-icon {
+    section.projetos {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        margin: 10px;
+        text-align: center;
+        transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+
+    .footer-section {
+        text-align: center;
+    }
+
+    
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 10px;
+    }
+
+    .nav-list {
+        display: none; /* Oculta a lista de navegação padrão */
+    }
+
+    .mobile-menu {
         display: block;
-    }
-
-    .mobile-menu-icon button {
-        
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        margin-right: -20px;
-        
-    }
-
-    .mobile-menu-icon img {
-        width: 32px;
-    
     }
 
     .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-        margin-top: 50px;
-        
-    
-    }
-
-    .mobile-menu ul li a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 2.5rem;
-        transition: 1.3s;
-    }
-
-    
-    .open {
-        display:block ;
-        height: 98vh;
-    }
-
-    .mobile-menu-icon {
-        float: right;
-        
-    }
-
-    .center {
-        margin: 0 auto;
-        width: 100%;
-
-    }
-
-    .inicio {
-        display: block;
-        position: relative;
-        
-        
-        
-    }
-
-    .icon-coder {
-        display: none;
-    }
-
-    
-    .eu-sou {
-    
-        color: white;
-        text-align: left;
-        position: relative;
-        margin: 30px 20px;
-        line-height: 54px;
-        
-        
-    }
-    
-    .eu-sou h4 {
-        font-size: 24px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 100;
-        padding: 10px 0px;
-    }
-    
-    .eu-sou h2 {
-        font-size: 30px;
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: normal;
-        padding: 5px 0px;
-    }
-    
-    .eu-sou h1 {
-        font-size: 50px ;
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: bold;
-        white-space: nowrap; /* Impede a quebra de linha */
-        padding: -5px 0px;
-        
-        
-    }
-
-   
-    input#botao-projetos {
-        width: 10rem;
-        height: 2.5rem;
-        font-size: 1.1rem;
-        letter-spacing: 0.3rem;
-        font-family: monospace;
-        background-color: #7984e9;
-        margin: 230px -285px;
-        border: none;
-        
-        
-    }
-
-    .sobre-mim {
-        width: 100%;
-        margin-top: -60px;
         padding: 0;
-        
     }
 
-    .sobre-mim h1 {
-        font-size: 25px;
-        background-color: rgba(240, 255, 255, 0.144);
-        padding: 20px;
-        margin: 160px auto;
-        text-align: center;
+    .mobile-menu a {
         display: block;
-    }
-
-    .sobre-mim .titulo-sobre-mim h1 {
-        display: block;
-        
-    }
-
-    .img-sobre-mim img {
-        display: block;
-        margin: -120px auto;
-        width: 170px;
-    }
-
-  
-
-    .sobre-mim p {
-        width: 90%;
-        margin: 250px auto;
-    }
-
-    .projetos h1 {
-        margin: 0 auto;
-        font-size: 25px;
-        background-color: rgba(240, 255, 255, 0.144) ;
-        padding: 20px;
-    }
-
-    .container {
-        display: flex;
-        align-items: center; /* Centralizar os cards na horizontal */
-        padding: 20px;
-        margin: 30px auto;
-      }
-    
-      .card {
-        width: calc(100% - 40px); /* Ajuste da largura para ocupar toda a largura disponível */
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-    
-      .card p {
-        padding: 20px;
-        margin: 0; /* Remover margem padrão do parágrafo */
-      }
-    
-      .card-description {
         padding: 10px;
-        background-color: #ddd;
-      }
-
-    
-      .experiencias .container {
-        padding: 0;
-        
-      }
-
-      .experiencias h1 {
-        width: 100%;
-        font-size: 25px;
-        background-color: rgba(240, 255, 255, 0.144);
-        padding: 20px;
-        margin: -20px auto;
-        text-align: center;
-        
-      }
-
-      .experiencias .icons-redes {
-        margin-top: 40px;
-        
-      }
-
-
-      .experiencias .icon-rede img {
-        width: 50px;
-        
-      }
-
-      footer {
-        background-color:#535EC2;
-        color: #fff;
-        padding: 10px 0;
-        width: 100%;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
     }
 
-   
-    .container {
-        display: flex;
-        align-items: stretch;
-        padding: 20px;
-        margin: 30px auto;
-    }
-}
-
-@media screen and (max-width:430px) {
-
-   
-
-    .projetos .card {
-        
-        width: 150px;
-        height: 150px;
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        margin: 10px; /* Espaçamento entre os cards */
-        text-align: center;
-    
-    }
-
-    .card p {
-    
-        margin-top: 30px;
-        color: rgb(0, 0, 0);
-        width: 100%;
-      }
-
-      .card:hover {
-        
-        color: white;
-        padding: 0;
-        border: 2px solid rgb(97, 201, 233);
-        box-shadow: 1px 1px 25px 2px rgba(132, 226, 255, 0.514);
-        
-      }
-
-      .contato-botao button {
-        color: white;
-        
-      }
-
-      .contato-botao a {
-        text-decoration: none;
-      }
-
-  
-
-
-
-} 
-
-    
     .footer-section {
-        
-        flex: 1;
-        margin: 30px;
-        width: 100%;
+        margin-bottom: 20px;
     }
 
-    .footer-section ul {
-        
-        list-style: none;
-    }
-    
-    .footer-section h4 {
-        margin-bottom: 10px;
-        font-size: 1.2em;
-        
-    }
-    
-   
     .footer-section form {
         display: flex;
         flex-direction: column;
-        margin-top: 10px;
-        
-        
     }
-    
-    .footer-section input[type="email"] {
-        padding: 10px;
+
+    .footer-section input {
         margin-bottom: 10px;
-        border: none;
-        border-radius: 5px;
+        width: 100%;
     }
-    
+
     .footer-section button {
-        
-        padding: 10px;
-        background-color: #555;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        cursor: pointer;
+        width: 100%;
     }
-    
-    .footer-section button:hover {
-        background-color: #777;
+}
+
+/* Estilos específicos para dispositivos menores */
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 5px;
     }
-  
-    
 
-   
+    .logo img {
+        max-width: 100px; /* Ajusta o tamanho da logo para dispositivos menores */
+    }
 
+    .icon-coder img {
+        max-width: 50px;
+    }
 
-
-
-
-
-
+    .footer-section {
+        font-size: 14px;
+    }
+}
