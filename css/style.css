@@ -319,6 +319,7 @@ footer {
     color: #fff;
     padding: 20px 0;
     width: 100%;
+    position: relative;
 }
 
 .footer-content {
@@ -354,6 +355,8 @@ footer {
     padding: 10px;
     background-color: #204099;
     color: #ddd;
+    position: absolute;
+    width: 100%;
 }
 
 .footer-bottom p {
@@ -463,7 +466,9 @@ footer {
 }
 
 /* Estilos específicos para dispositivos menores */
+
 @media (max-width: 480px) {
+    
     .nav-bar {
         padding: 5px;
     }
