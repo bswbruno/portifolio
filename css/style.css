@@ -374,6 +374,7 @@ footer {
 
 
 /* Responsividade para tablets */
+    
 @media (max-width: 1024px) {
     .nav-bar {
         flex-direction: column;
@@ -468,7 +469,7 @@ footer {
 /* Estilos específicos para dispositivos menores */
 
 @media (max-width: 480px) {
-    
+
     .nav-bar {
         padding: 5px;
     }
@@ -484,4 +485,9 @@ footer {
     .footer-section {
         font-size: 14px;
     }
+
+
 }
+
+}
+    
