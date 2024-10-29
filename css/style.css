@@ -425,45 +425,115 @@ footer {
 }
 
 /* Responsividade para celulares */
-@media (max-width: 768px) {
-    .nav-bar {
-        padding: 10px;
-    }
+/* Estilos Gerais */
 
-    .nav-list {
-        display: none; /* Oculta a lista de navegação padrão */
-    }
+@media screen (max-width:768px;) {
+    
+}
 
-    .mobile-menu {
-        display: block;
-    }
+body, html {
+    font-family: 'Inter Tight', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    .mobile-menu ul {
-        padding: 0;
-    }
+header, footer, .center, .mobile-menu, .nav-bar {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
-    .mobile-menu a {
-        display: block;
-        padding: 10px;
-    }
+/* Navegação e Cabeçalho */
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-    .footer-section {
-        margin-bottom: 20px;
-    }
+.nav-bar .logo, .nav-bar .botao-contato {
+    display: none;
+}
 
-    .footer-section form {
-        display: flex;
-        flex-direction: column;
-    }
+.nav-list ul {
+    padding: 0;
+}
 
-    .footer-section input {
-        margin-bottom: 10px;
-        width: 100%;
-    }
+.nav-list ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
 
-    .footer-section button {
-        width: 100%;
-    }
+.mobile-menu-icon {
+    display: block;
+}
+
+.mobile-menu ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-menu .contato-botao {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Modal */
+.modal {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Seções de Conteúdo */
+.inicio, .sobre-mim, .projetos, .experiencias {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cards de Projetos */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Ícones de Experiências */
+.icons-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-rede {
+    width: 50px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Rodapé */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-section {
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
 }
 
 /* Estilos específicos para dispositivos menores */
