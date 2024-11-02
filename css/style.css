@@ -491,7 +491,7 @@ footer {
     }
     
     /* Seções de Conteúdo */
-    .inicio, .sobre-mim, .projetos, .experiencias {
+    .inicio, .sobre-mim, .projetos {
         padding: 20px;
         text-align: center;
     }
@@ -633,6 +633,46 @@ footer {
         text-align: center;
         transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
+
+    .experiencias h1 {
+        display: block;
+        padding: 0;
+        font-size: 32px;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: normal;
+        text-transform: uppercase;
+        
+    }
+    
+    section.experiencias {
+        margin: 20px auto;
+        color: white;
+        text-align: center;
+    }
+    
+    .icons-redes {
+        width: 100%;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap; /* Permite que os ícones se movam para a linha seguinte, se necessário */
+        justify-content: center; /* Centraliza os ícones na linha */
+    }
+    
+    .icons-redes .icon-rede {
+        display: flex; /* Permite o uso de flexbox */
+        flex-direction: column; /* Coloca o texto do ícone embaixo da imagem */
+        align-items: center; /* Centraliza o conteúdo dentro de cada ícone */
+        margin: 10px; /* Espaçamento entre os ícones */
+        flex: 1 0 30%; /* Permite que cada ícone ocupe até 30% da largura disponível */
+    }
+    
+    .icon-rede img {
+        width: 70px;
+    }
+    
 
 
     .footer-section {
