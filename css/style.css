@@ -297,23 +297,26 @@ section.inicio {
     margin: 0 104px;
 }
 
-section.experiencias {
-    margin: 50px 0;
-    color: white;
-    text-align: center;
-}
-
-.container .icons-redes {
-    margin-top: 100px;
+.icons-redes {
+    width: 100%;
+    margin: 50px auto;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os ícones se movam para a linha seguinte, se necessário */
+    justify-content: center; /* Centraliza os ícones na linha */
+    color: white;
 }
 
-.container .icon-rede {
-    padding: 30px;
+.icons-redes .icon-rede {
+    display: flex; /* Permite o uso de flexbox */
+    flex-direction: column; /* Coloca o texto do ícone embaixo da imagem */
+    align-items: center; /* Centraliza o conteúdo dentro de cada ícone */
+    margin: 10px; /* Espaçamento entre os ícones */
+    flex: 1 0 30%; /* Permite que cada ícone ocupe até 30% da largura disponível */
 }
 
+.icon-rede img {
+    width: 80px;
+}
 footer {
     background-color: #5677e0;
     color: #fff;
