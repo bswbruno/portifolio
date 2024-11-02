@@ -394,6 +394,21 @@ footer {
         display: block; /* Mostra o menu móvel em tablets */
     }
 
+  
+
+    #botao-projetos {
+        width: 165px;
+        height: 40px;
+        
+        border-radius: 7px;
+        background-color: #535EC2;
+        color: white;
+        font-weight: 700;
+        border: none;
+        letter-spacing: 2px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
     .section .projetos h1 {
         color: white;
         font-family: "IBM Plex Mono", monospace;
@@ -404,7 +419,7 @@ footer {
     }
 
     section.projetos {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -496,9 +511,14 @@ footer {
 }
 
 
-/* Estilos específicos para dispositivos menores */
+/* Estilos específicos para dispositivos menores---------------------------------------------------- */
 
 @media screen and (max-width:480px) {
+
+    .center {
+        width: 100%;
+        
+    }
 
     .mobile-menu {
         display: none;
@@ -514,6 +534,7 @@ footer {
         position: absolute;
         top: 18px;
         left: 20px;
+        
     }
 
     .mobile-menu-icon {
@@ -543,7 +564,7 @@ footer {
     .eu-sou {
         color: white;
         margin: 60px auto;
-        line-height: 90px;
+        line-height: 80px;
         text-align: center;
     }
     
@@ -568,7 +589,50 @@ footer {
         margin-top: -20px;
         
     }
+
+    #botao-projetos {
+        display: none;
+    }
+
+   
+
+    .sobre-mim img {
+        display: none;
+    }
     
+    
+
+    .sobre-mim p {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: -200px auto;
+
+    }
+
+    .menu-projetos {
+        margin: 0;
+        padding: 0;
+    }
+
+    .projetos {
+        width: 100%;
+    }
+
+    .projetos h1 {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .card {
+        width: 140px;
+        height: 150px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        margin: 10px;
+        text-align: center;
+        transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
 
 
     .footer-section {
