@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
+    
 }
 
 :root {
@@ -523,6 +524,13 @@ footer {
         
     }
 
+    .inicio {
+        margin: 0;
+        padding: 0;
+        height: 150px;
+        width: 100%;
+    }
+
     .mobile-menu {
         display: none;
     }
@@ -597,29 +605,44 @@ footer {
         display: none;
     }
 
-   
+    .sobre-mim {
+        margin: 10px auto;
+    }
 
     .sobre-mim img {
         display: none;
     }
-    
-    
+
+    .icon-coder img {
+       width: 200px;
+       display: none;
+
+       
+    }
+
+    .sobre-mim h1 {
+        margin: 20px auto;
+    }
 
     .sobre-mim p {
         width: 100%;
         text-align: center;
         display: block;
-        margin: -200px auto;
+        margin: 100px auto;
 
     }
 
     .menu-projetos {
-        margin: 0;
+        
         padding: 0;
+        
+        
     }
 
-    .projetos {
+    section.projetos {
         width: 100%;
+        margin-top: -500px;
+        
     }
 
     .projetos h1 {
