@@ -394,7 +394,7 @@ footer {
     }
 
     .mobile-menu {
-        display: block; /* Mostra o menu móvel em tablets */
+        display: none; /* Mostra o menu móvel em tablets */
     }
 
   
@@ -632,7 +632,7 @@ footer {
         height: 150px;
         background-color: #f0f0f0;
         border-radius: 8px;
-        margin: 10px;
+        margin: 10px auto;
         text-align: center;
         transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
