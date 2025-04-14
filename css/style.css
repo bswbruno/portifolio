@@ -280,6 +280,11 @@ section.inicio {
     font-weight: bold;
 }
 
+.card a {
+    color: white;
+    text-decoration: none;
+}
+
 
 .experiencias h1 {
     color: white;
@@ -370,155 +375,17 @@ footer {
 }
 
 
-/* Responsividade para tablets */
-    
-@media screen and (max-width: 1024px) {
-    .nav-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-item a {
-        margin: 5px 0;
-    }
-
-    .mobile-menu {
-        display: none; /* Mostra o menu móvel em tablets */
-    }
-
-  
-
-    #botao-projetos {
-        width: 165px;
-        height: 40px;
-        
-        border-radius: 7px;
-        background-color: #535EC2;
-        color: white;
-        font-weight: 700;
-        border: none;
-        letter-spacing: 2px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .section .projetos h1 {
-        color: white;
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 2rem;
-        font-weight: normal;
-        text-align: center;
-        
-    }
-
-    section.projetos {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .card {
-        width: 200px;
-        height: 200px;
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        margin: 10px;
-        text-align: center;
-        transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    }
-
-    .footer-section {
-        text-align: center;
-    }
-
-    
-}
-
-/* Responsividade para celulares */
-/* Estilos Gerais */
-
-@media screen and (max-width: 768px) {
-
-       /* Navegação e Cabeçalho */
-    
-       .nav-bar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .nav-bar .logo, .nav-bar .botao-contato {
-        display: none;
-    }
-    
-    .nav-list ul {
-        padding: 0;
-    }
-    
-    .nav-list ul li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-    
-    .mobile-menu-icon {
-        display: block;
-    }
-    
-    .mobile-menu ul {
-        padding: 0;
-        list-style: none;
-        text-align: center;
-    }
-    
-    .mobile-menu .contato-botao {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-    
-    /* Modal */
-    .modal {
-        width: 90%;
-        max-width: 500px;
-        margin: auto;
-    }
-    
-    /* Seções de Conteúdo */
-    .inicio, .sobre-mim, .projetos {
-        padding: 20px;
-        text-align: center;
-    }
-    
-    /* Cards de Projetos */
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
-    }
-    
-    .card {
-        padding: 10px;
-        
-    }    
- 
-}
-
-
-/* Estilos específicos para dispositivos menores---------------------------------------------------- */
+/* -------------  Estilos específicos para Celulares  ----------- */
 
 @media screen and (max-width:480px) {
 
     .center {
         width: 100%;
         
-    }
+    }   
 
     .inicio {
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         height: 150px;
         width: 100%;
@@ -643,14 +510,15 @@ footer {
         width: 100%;
     }
 
+    .container--cards {
+        display: flex;
+        
+    }
+
     .card {
-        width: 140px;
-        height: 150px;
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        margin: 10px auto;
-        text-align: center;
-        transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+     
+        width: 100%;
+     
     }
 
     .experiencias h1 {
