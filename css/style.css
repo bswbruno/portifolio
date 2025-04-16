@@ -454,7 +454,7 @@ footer {
 
 /* Responsividade para dispositivos móveis */
 
-@media  (max-width: 767.98px) {
+@media  (max-width: 768px) {
 
     .center {
         width: 100%;
@@ -576,11 +576,11 @@ footer {
 
     .container--cards {
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse;
         margin-top: 2rem;
         align-self: center;
         align-items: center;
-        flex-direction: row;
+        
         flex-wrap: wrap;
         width: 100%;
     }
@@ -639,7 +639,7 @@ footer {
     }
 }
 
-/* Responsividade para dispositivos móveis tablets */
+/* Responsividade para dispositivos móveis tablets e desktop */
 
 @media screen and (min-width: 768px)  {
     /* Header adjustments */
@@ -707,7 +707,7 @@ footer {
         display: block;
     }
     
-    /* About section adjustments */
+  
     .sobre-mim {
         margin: 50px auto;
     }
@@ -735,9 +735,7 @@ footer {
         font-size: 2.5rem;
     }
     
-    .container {
-        justify-content: space-around;
-    }
+   
     
     .card {
         width: 45%;
