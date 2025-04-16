@@ -553,4 +553,192 @@ footer {
     }
 }
 
+/* Responsividade para dispositivos móveis */
+
+@media screen and (max-width:) {
+    /* Seu código aqui */
+
+
+
+    .center {
+        width: 100%;
+    }
+
+    .botao-contato {
+        padding-right: 15px;
+    }
+
+    .inicio {
+        margin: 0 auto;
+        padding: 0;
+        height: 150px;
+        width: 100%;
+    }
+
+    .nav-bar {
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        
+        
+    }
+
+    .nav-bar .logo {
+        display: none;
+        
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        padding-left: 15px;
+        
+    }
+
+    button#menu-button {
+        background: transparent;
+        border: none;
+    }
+
+    .mobile-menu-icon button img {
+        width: 40px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    section.inicio {
+        display: block;
+        width: 100%;
+    }
+
+    .eu-sou {
+        color: white;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    .eu-sou h4 {
+        font-size: 34px;
+        font-weight: 100;
+        margin-bottom: -25px;
+    }
+
+    .eu-sou h2 {
+        font-size: 20px;
+        margin-top: -40px;
+    }
+
+    .eu-sou h1 {
+        font-size: 60px;
+        margin-top: -20px;
+    }
+
+    
+
+    #botao-projetos {
+        display: none;
+    }
+
+    .sobre-mim {
+        margin: 10px auto;
+    }
+
+    .sobre-mim img,
+    .icon-coder img {
+        display: none;
+    }
+
+    .sobre-mim h1 {
+       margin: 5.9rem auto 1.2rem 0;
+        text-align: center;
+        color: #828ce4;
+        border: 2px solid white;
+        width: 100%;
+    }
+
+    .sobre-mim p {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    section.projetos {
+        width: 100%;
+        margin-top: -500px;
+    }
+
+    .projetos h1 {
+       margin: 37rem auto 0 auto;
+        text-align: center;
+        color: #828ce4;
+        border: 2px solid white;
+        width: 90%;
+    }
+
+    .container--cards {
+        display: flex;
+        margin-top: 2rem;
+        align-self: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .experiencias h1 {
+        font-size: 32px;
+        margin: 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    section.experiencias {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .icons-redes {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .icons-redes .icon-rede {
+        flex: 1 0 30%;
+    }
+
+    .icon-rede img {
+        width: 70px;
+    }
+
+    .footer-section {
+        font-size: 14px;
+    }
+
+    footer input {
+        display: flex;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    footer button {
+        padding: 5px;
+        border: 1px solid #e4e6eb;
+        background-color: #204099;
+        color: white;
+    }
+
+    .footer-bottom p {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+
+
 
