@@ -61,7 +61,34 @@ header {
 .nav-list ul li a {
     text-decoration: none;
     color: white;
+    position: relative; /* Adicionado para posicionar o pseudo-elemento */
+    padding-bottom: 4px; /* Espaço para a linha animada */
 }
+
+.nav-list ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Espessura da linha */
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease-out, opacity 0.2s ease-in;
+     opacity: 0;
+     
+    
+}
+
+.nav-list ul li a:hover::after {
+    width: 100%; /* Linha cresce até 100% da largura */
+    width: 100%;
+    opacity: 1;
+    
+}
+
+
+
+
 
 .nav-item {
     margin: 0 25px;
@@ -82,10 +109,19 @@ header {
     transition: background-color 0.3s, transform 0.3s;
 }
 
+.botao-contato button {
+    transition: all 0.3s;
+}
+
 .botao-contato button:hover {
-    transform: scale(0.95);
-    background-color: #7984e9;
-    cursor: pointer;
+    padding-right: 25px;
+}
+
+.botao-contato button:hover::after {
+    content: '<<';
+    position: absolute;
+    margin-left: 5px;
+    transition: all 0.3s;
 }
 
 .botao-contato a {
@@ -196,10 +232,55 @@ section.inicio {
     transition: background-color 0.3s, transform 0.3s;
 }
 
+#botao-projetos {
+    width: 165px;
+    height: 40px;
+    margin: 327px -670px;
+    border-radius: 7px;
+    background-color: #535EC2;
+    color: white;
+    font-weight: 700;
+    border: none;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    position: relative;
+    padding-left: 15px; /* Espaço inicial para o texto */
+    overflow: hidden;
+}
+
+#botao-projetos::before {
+    content: '>>';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    font-weight: normal;
+}
+
 #botao-projetos:hover {
     transform: scale(0.95);
-    background-color: #7984e9;
+    /* background-color: #7984e9; */
     cursor: pointer;
+    padding-left: 25px; /* Empurra o texto para a direita */
+}
+
+#botao-projetos:hover::before {
+    left: 10px;
+    opacity: 1;
+}
+
+#botao-projetos span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-weight: normal;
+}
+
+#botao-projetos:hover span {
+    transform: translateX(8px); /* Desloca o texto adicionalmente */
+    font-weight: normal;
 }
 
 /* Seção Sobre Mim */
