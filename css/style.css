@@ -578,16 +578,18 @@ footer {
         display: flex;
         flex-direction: column;
         margin:2rem auto;
-        align-self: center;
-        align-items: center;
         
+        align-content: center;
         flex-wrap: wrap;
         width: 100%;
     }
 
     .card {
+        display: flex;
         width: 20rem;
         margin: 1rem;
+        align-items: center;
+        align-self: center;
         
     }
 
