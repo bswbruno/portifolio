@@ -180,37 +180,149 @@ header {
 }
 
 /* Modal */
+/* Modal atualizado */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
 }
 
 .modal.show {
     display: flex;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
+    background: linear-gradient(145deg, #10153f, #1c2270);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    border: 1px solid rgba(83, 94, 194, 0.5);
+    animation: slideUp 0.4s ease;
+    font-family: "IBM Plex Mono", monospace;
 }
 
-.modal a {
-    text-decoration: none;
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.8rem;
+    color: #aeb2ff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #00ff88;
+}
+
+/* Conteúdo interno do modal */
+/* Modal estilizado */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #10153f, #1c2270);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 430px;
+    position: relative;
+    border: 1px solid rgba(83, 94, 194, 0.5);
+    animation: slideUp 0.4s ease;
+    font-family: "IBM Plex Mono", monospace;
+    text-align: center;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(25px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.8rem;
+    color: #aeb2ff;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+    color: #00ff88;
+    transform: scale(1.2);
+}
+
+/* Cabeçalho do modal */
+.modal-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #00ff88;
+    letter-spacing: 1px;
+}
+
+/* Texto e links */
+.modal-content p {
+    color: #d9dcff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.modal-content a {
+    color: #00ff88;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content a:hover {
+    color: #6a77e6;
+    transform: scale(1.05);
+}
+
+
 
 .close-button {
     color: #aaa;
