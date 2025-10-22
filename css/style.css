@@ -86,10 +86,6 @@ header {
     
 }
 
-
-
-
-
 .nav-item {
     margin: 0 25px;
 }
@@ -98,6 +94,60 @@ header {
 .mobile-menu {
     display: none;
 }
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  height: 100%;
+  background-color: #080C31;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-menu ul {
+    text-align: center;
+    list-style: none;
+    padding-top: 90px;
+    margin-top: 50px;
+    align-content: center;
+    
+
+}
+
+.mobile-menu ul li  {
+    margin: 20px 0;
+    
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}   
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+/* Exibir o ícone apenas no mobile */
+@media (max-width: 999px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+
 
 .botao-contato button {
     width: 9.25rem;
@@ -142,6 +192,7 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    
 }
 
 .modal.show {
@@ -218,6 +269,26 @@ section.inicio {
 .logo-mobile-top {
     display: none;
 }
+
+.text-animado {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 3rem;
+    color: #fff;
+    display: inline-block;
+}
+
+.text-animado::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+    color: #00ff88; /* Cor do cursor */
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+
 
 #botao-projetos {
     width: 165px;
