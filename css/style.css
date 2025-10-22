@@ -510,6 +510,15 @@ section.inicio {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    
+}
+
+.container--cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .card {
