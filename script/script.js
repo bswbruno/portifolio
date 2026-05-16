@@ -39,7 +39,7 @@ const T = {
     ft_bio:"Desenvolvedor Front-End baseado no Rio de Janeiro, apaixonado por criar interfaces modernas, funcionais e memoráveis.",
     ft_nav:"Navegação", ft_social:"Redes Sociais",
     ft_copy:"© 2025 Nobru.Dev — Todos os direitos reservados.",
-    typing:["Front-End","Designer","Criativo"]
+    typing:["Full-Stack","Designer","Criativo"]
   },
   en:{
     nav_home:"HOME", nav_about:"ABOUT", nav_proj:"PROJECTS",
