@@ -1,269 +1,410 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bruno Santos — Desenvolvedor Front-End | Portfolio">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="image/icon-coder.png" type="image/x-icon">
-    <script src="https://cdn.counter.dev/script.js" data-id="1035840c-fb25-453c-a298-aeaf7698cb40" data-utcoffset="-3"></script>
     <link rel="stylesheet" href="css/style.css">
-    
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Bruno Santos</title>
+    <title>Bruno Santos — Nobru.Dev</title>
 </head>
-
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo-mobile-top">
-                <img src="image/icon-coder.png" alt="Coder Icon">
-            </div> <!-- logo-mobile-top -->
 
-            <div class="logo">
-                <img src="image/MINHA LOGO NOBRU.DEV/MINHA LOGO NOBRU.DEV sem fundo letra white.png" alt="Logo Nobru.Dev">
+<!-- ===================== HEADER ===================== -->
+<header>
+    <nav class="nav-bar">
+        <div class="logo">
+            <img src="image/MINHA LOGO NOBRU.DEV/MINHA LOGO NOBRU.DEV sem fundo letra white.png" alt="Nobru.Dev">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#inicio"      data-i18n="nav_home">INÍCIO</a></li>
+            <li><a href="#sobre"       data-i18n="nav_about">SOBRE</a></li>
+            <li><a href="#projetos"    data-i18n="nav_proj">PROJETOS</a></li>
+            <li><a href="#habilidades" data-i18n="nav_skills">HABILIDADES</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button class="theme-btn" id="theme-btn"><span id="theme-icon">🌙</span></button>
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-lang="pt">PT</button>
+                <button class="lang-btn"        data-lang="en">EN</button>
             </div>
+            <button class="btn-contato" id="btn-modal" data-i18n="nav_contact">CONTATO</button>
+        </div>
 
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#eu-sou">INICIO</a></li>
-                    <li class="nav-item"><a href="#sobre-mim">SOBRE</a></li>
-                    <li class="nav-item"><a href="#menu-projetos">PORTIFÓLIO</a></li>
-                    <li class="nav-item"><a href="#experiencias">EXPERIÊNCIAS</a></li>
-                </ul>
-            </div> <!-- nav-list -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
 
-            <div class="botao-contato">
-                <button id="btn-abrir-modal">CONTATO</button>
-            </div> <!-- botao-contato -->
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+    <a href="#inicio"      data-i18n="nav_home">INÍCIO</a>
+    <a href="#sobre"       data-i18n="nav_about">SOBRE</a>
+    <a href="#projetos"    data-i18n="nav_proj">PROJETOS</a>
+    <a href="#habilidades" data-i18n="nav_skills">HABILIDADES</a>
+    <div class="mobile-controls">
+        <button class="theme-btn" id="theme-btn-m"><span id="theme-icon-m">🌙</span></button>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="pt">PT</button>
+            <button class="lang-btn"        data-lang="en">EN</button>
+        </div>
+    </div>
+    <button class="btn btn-primary" id="btn-modal-m" data-i18n="nav_contact">CONTATO</button>
+</div>
 
-            <div id="contato-modal" class="modal"> <!-- modal -->  
-                <div class="modal-content">
-                    <span class="close-button" id="btn-fechar-modal">&times;</span>
-                    <h2>Entre em contato</h2>
-                    <p>WhatsApp: <a href="https://wa.me/5521965969650" target="_blank">(21) 9659-69650</a></p>
-                    <p>Telefone: (21) 9804-88310</p>
-                    <p>E-mail: <a href="mailto:wanderley.bruno@gmail.com" target="_blank">wanderley.bruno@gmail.com</a></p>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <p class="hero-label" data-i18n="hero_avail">// disponível para novas oportunidades</p>
+                <h1 class="hero-title">Bruno<br><span class="accent">Santos</span></h1>
+                <p class="hero-role">
+                    <span data-i18n="hero_dev">Desenvolvedor</span>&nbsp;<span id="typing-word"></span><span class="cursor"></span>
+                </p>
+                <p class="hero-bio" data-i18n="hero_bio">
+                    Formado em Análise e Desenvolvimento de Sistemas, apaixonado por criar interfaces modernas e funcionais. Combino técnica com design para entregar experiências memoráveis.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn btn-primary" data-i18n="hero_cta1">Ver Projetos</a>
+                    <button class="btn btn-outline" id="btn-modal-hero" data-i18n="hero_cta2">Entrar em Contato</button>
                 </div>
-            </div> <!-- modal -->
-
-            <div class="mobile-menu-icon">
-                <button id="menu-button" class="icon">
-                    <img src="image/barra-de-menu.png" alt="Menu Icon">
-                </button>
-            </div> <!-- mobile-menu-icon -->
-        </nav> <!-- nav-bar -->
-
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item nav-link"><a href="#eu-sou">INICIO</a></li>
-                <li class="nav-item nav-link"><a href="#sobre-mim">SOBRE</a></li>
-                <li class="nav-item nav-link"><a href="#menu-projetos">PORTIFÓLIO</a></li>
-                <li class="nav-item nav-link"><a href="#experiencias">EXPERIÊNCIAS</a></li>
-            </ul>
-
-           
-        </div> <!-- mobile-menu -->
-    </header>
-
-    <div class="center">
-        <section class="inicio">
-            <div class="eusou-com-botao">
-                <div class="eu-sou" id="eu-sou">
-                    <h4>Eu sou um,</h4>
-                    <h2>Desenvolvedor</h2>
-                   <h1 class="text-animado"><span id="typing"></span></h1>
-
-                
+                <div class="hero-socials">
+                    <a href="https://github.com/wanderleybruno" target="_blank" class="social-link">⌥ GitHub</a>
+                    <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank" class="social-link">⌥ LinkedIn</a>
+                    <a href="https://www.instagram.com/nobru_dev/" target="_blank" class="social-link">⌥ Instagram</a>
                 </div>
-                <a href="#menu-projetos">
-                    <div class="projeto-botao-inicio">
-                       <button id="botao-projetos"><span>PROJETOS</span></button>
-                    </div>
-                </a>
             </div>
-            <div class="icon-coder">
-                <img src="image/icon-coder.png" alt="Icon Coder">
+            <div class="hero-img-wrap">
+                <img src="image/foto-perfil-yellow.png" alt="Bruno Santos">
             </div>
-        </section> <!-- inicio -->
+        </div>
+    </div>
+</section>
 
-        <section class="sobre-mim" id="sobre-mim">
-            <div class="img-sobre-mim">
-                <img src="image/foto-perfil-yellow.png" alt="Foto de perfil">
+<!-- ===================== ABOUT ===================== -->
+<section id="sobre">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img-wrap reveal">
+                <img src="image/foto-perfil-yellow.png" alt="Bruno Santos">
+                <div class="about-badge">
+                    <div class="badge-num">9+</div>
+                    <div class="badge-lbl" data-i18n="badge_proj">PROJETOS</div>
+                </div>
             </div>
-            <div class="titulo-sobre-mim">
-                <h1>SOBRE MIM</h1>
+            <div class="reveal">
+                <p class="section-label" data-i18n="about_lbl">// sobre mim</p>
+                <h2 class="section-title" id="about-title">Olá, sou o<br><span class="accent">Bruno!</span></h2>
+                <div class="about-text">
+                    <p data-i18n="about_p1">
+                        Sou formado em Análise e Desenvolvimento de Sistemas e trago uma combinação única de habilidades técnicas e criativas. Utilizo ferramentas como Figma e Photoshop para criar interfaces que vão além do funcional — são visualmente memoráveis.
+                    </p>
+                    <p data-i18n="about_p2">
+                        Meu foco atual é o desenvolvimento Front-End moderno, construindo interfaces acessíveis e performáticas. Estou sempre buscando novos desafios e oportunidades de crescimento na área.
+                    </p>
+                </div>
+                <div class="tag-list">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Photoshop</span>
+                    <span class="tag tag-study" data-i18n="tag_java">Java (Estudando)</span>
+                </div>
+                <div class="about-ctas">
+                    <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank" class="btn btn-primary" data-i18n="about_li">Ver LinkedIn</a>
+                    <a href="https://github.com/wanderleybruno" target="_blank" class="btn btn-outline" data-i18n="about_gh">Ver GitHub</a>
+                </div>
             </div>
-            <p>Olá, meu nome é Bruno dos Santos, formado em Análise e Desenvolvimento de Sistemas. Trago uma combinação única de habilidades ao unir meu conhecimento técnico com uma sólida base em design gráfico, utilizando
-                ferramentas como Figma e Photoshop. <br><br>
-                Meu interesse pela área de desenvolvimento web motiva-me a buscar desafios inovadores e projetos criativos. Estou disposto a contribuir com meu conjunto de habilidades na criação de soluções envolventes e funcionais para o mundo online.
-            </p>
-        </section>
+        </div>
+    </div>
+</section>
 
-      <section class="projetos" id="menu-projetos">
-    <h1>PROJETOS ACADÊMICOS E PESSOAIS</h1>
-    <div class="container container--cards">
+<!-- ===================== PROJECTS ===================== -->
+<section id="projetos">
+    <div class="container">
+        <div class="reveal">
+            <p class="section-label" data-i18n="proj_lbl">// meus projetos</p>
+            <h2 class="section-title" data-i18n="proj_title">Portfólio</h2>
+            <p class="section-sub" data-i18n="proj_sub">Projetos acadêmicos e pessoais — filtre por tecnologia</p>
+        </div>
 
-          <div class="card" id="cards" onmouseover="virar()" onmouseout="desvirar()">
-                <a href="https://bswbruno.github.io/site-biasStudio/" target="_blank">
-                    <img src="image/capa.site-bias-estetica.png" alt="Bias Estética">
-                    <p>Site Estética v.2</p>
-                </a>
+        <div class="filter-bar reveal">
+            <button class="filter-btn active" data-filter="all"      data-i18n="f_all">Todos</button>
+            <button class="filter-btn"        data-filter="html-css" data-i18n="f_html">HTML / CSS</button>
+            <button class="filter-btn"        data-filter="js"       data-i18n="f_js">JavaScript</button>
+            <button class="filter-btn"        data-filter="react"    data-i18n="f_react">React</button>
+            <button class="filter-btn"        data-filter="java"     data-i18n="f_java">Java</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- REACT -->
+            <div class="project-card reveal" data-category="react">
+                <div class="card-img">
+                    <img src="image/capa.site-bias-estetica.png" alt="Site Estética v.2">
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/site-biasStudio/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-react">React</span><span class="ctag c-css">CSS</span></div>
+                    <div class="card-title" data-i18n="p_bias">Site Estética v.2</div>
+                    <div class="card-desc"  data-i18n="p_bias_d">Site moderno para estúdio de estética com design profissional.</div>
+                </div>
             </div>
 
-
-        <div class="card">
-            <a href="https://bswbruno.github.io/Calmaria_Spa/" target="_blank">
-                <img src="image/capaProjeto.png" alt="SPA Calmaria">
-                <p>SPA Calmaria</p>
-            </a>          
-
-        </div>
-        
-        <div class="card">
-            <a href="https://bswbruno.github.io/projeto-android/" target="_blank">
-                <img src="image/capaAndroid.png" alt="História do Android">
-                <p>História do Android</p>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="https://bswbruno.github.io/bia-estetica/" target="_blank">
-                <img src="image/biasEstetica.png" alt="Landing Page Estética">
-                <p>Landing Page / Estética</p>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="https://bswbruno.github.io/loja-carro/" target="_blank">
-                <img src="image/capaLojaCarro.png" alt="Loja de Carro">
-                <p>Loja de Carro</p>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="https://bswbruno.github.io/loja-ii_acheii/" target="_blank">
-                <img src="image/capaAchadinhos.png" alt="Loja Afiliado Shopee">
-                <p>Loja de Afiliado Shopee</p>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="https://bswbruno.github.io/lojinha/" target="_blank">
-                <img src="image/lojaEletronicos.png" alt="Loja de Eletrônicos">
-                <p>Loja de Eletrônicos</p>
-            </a>
-        </div>
-        
-        
-
-         <div class="card" id="cards" onmouseover="virar()" onmouseout="desvirar()">
-                <a href="https://bswbruno.github.io/plataforma-colaborativa/" target="_blank">
+            <div class="project-card reveal" data-category="react">
+                <div class="card-img">
                     <img src="image/projeto01.png" alt="Plataforma Colaborativa">
-                    <p>Plataforma Colaborativa</p>
-                </a>
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/plataforma-colaborativa/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-react">React</span><span class="ctag c-js">JS</span></div>
+                    <div class="card-title" data-i18n="p_colab">Plataforma Colaborativa</div>
+                    <div class="card-desc"  data-i18n="p_colab_d">Plataforma web colaborativa com interface interativa e dinâmica.</div>
+                </div>
             </div>
 
-              <div class="card" id="cards" onmouseover="virar()" onmouseout="desvirar()">
-                <a href="https://bswbruno.github.io/appchamados/" target="_blank">
+            <div class="project-card reveal" data-category="react">
+                <div class="card-img">
                     <img src="image/appchamadostela.png" alt="Site de Chamados">
-                    <p>Site de Chamados</p>
-                </a>
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/appchamados/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-react">React</span><span class="ctag c-js">JS</span></div>
+                    <div class="card-title" data-i18n="p_cham">Site de Chamados</div>
+                    <div class="card-desc"  data-i18n="p_cham_d">Sistema de gerenciamento de chamados e suporte técnico.</div>
+                </div>
             </div>
-           
 
-
-    </div> <!-- container -->
-</section> <!-- projetos -->
-
-
-<section class="experiencias" id="experiencias">
-    <div class="expert">
-        <h1>Experiências</h1>
-        
-        <div class="icons-redes">
-            <div class="icon-rede">
-                <img src="image/icon-Html 5.png" alt="HTML Icon">
-                <p>HTML</p>
+            <!-- JAVASCRIPT -->
+            <div class="project-card reveal" data-category="js">
+                <div class="card-img">
+                    <img src="image/lojaEletronicos.png" alt="Loja de Eletrônicos">
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/lojinha/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-js">JS</span><span class="ctag c-html">HTML</span><span class="ctag c-css">CSS</span></div>
+                    <div class="card-title" data-i18n="p_elet">Loja de Eletrônicos</div>
+                    <div class="card-desc"  data-i18n="p_elet_d">E-commerce de eletrônicos com carrinho e listagem de produtos.</div>
+                </div>
             </div>
-            
-            <div class="icon-rede">
-                <img src="image/icon-CSS3.png" alt="CSS3 Icon">
-                <p>CSS3</p>
-                    </div>
 
-                    <div class="icon-rede">
-                        <img src="image/icon-JavaScript.png" alt="JavaScript Icon">
-                        <p>JavaScript</p>
-                    </div>
-
-                    <div class="icon-rede">
-                        <img src="image/icon-react.png" alt="React Icon">
-                        <p>React Native</p>
-                    </div>
-
-                    <div class="icon-rede">
-                        <img src="image/icon-Figma.png" alt="Figma Icon">
-                        <p>Figma</p>
-                    </div>
-
-                    <div class="icon-rede">
-                        <img src="image/icon-Adobe Photoshop.png" alt="Photoshop Icon">
-                        <p>Photoshop</p>
-                    </div>
-                </div> <!-- icons-redes -->
-            </div> <!-- container -->
-        </section> <!-- experiencias -->
-    </div> <!-- center -->
-
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-section">
-                <h4>Contato</h4>
-                <p>Endereço: Estrada Santa Eugênia, 2400 - Santa Cruz, Rio de Janeiro</p>
-                <p>WhatsApp: <a href="https://wa.me/5521965969650" target="_blank">(21) 9659-69650</a></p>
-                <p>Telefone: (21) 9804-88310</p>
-                <p>E-mail: <a href="mailto:wanderley.bruno@gmail.com" target="_blank">wanderley.bruno@gmail.com</a></p>
+            <div class="project-card reveal" data-category="js">
+                <div class="card-img">
+                    <img src="image/capaAchadinhos.png" alt="Loja Afiliado Shopee">
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/loja-ii_acheii/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-js">JS</span><span class="ctag c-html">HTML</span></div>
+                    <div class="card-title" data-i18n="p_shp">Loja Afiliado Shopee</div>
+                    <div class="card-desc"  data-i18n="p_shp_d">Loja de produtos afiliados com links diretos para a Shopee.</div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Navegação</h4>
+
+            <div class="project-card reveal" data-category="js">
+                <div class="card-img">
+                    <img src="image/capaLojaCarro.png" alt="Loja de Carros">
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/loja-carro/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-js">JS</span><span class="ctag c-css">CSS</span></div>
+                    <div class="card-title" data-i18n="p_car">Loja de Carros</div>
+                    <div class="card-desc"  data-i18n="p_car_d">Landing page para concessionária com catálogo de veículos.</div>
+                </div>
+            </div>
+
+            <!-- HTML / CSS -->
+            <div class="project-card reveal" data-category="html-css">
+                <div class="card-img">
+                    <img src="image/capaProjeto.png" alt="SPA Calmaria">
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/Calmaria_Spa/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-html">HTML</span><span class="ctag c-css">CSS</span></div>
+                    <div class="card-title" data-i18n="p_spa">SPA Calmaria</div>
+                    <div class="card-desc"  data-i18n="p_spa_d">Site institucional para clínica de spa e bem-estar.</div>
+                </div>
+            </div>
+
+            <div class="project-card reveal" data-category="html-css">
+                <div class="card-img">
+                    <img src="image/capaAndroid.png" alt="História do Android">
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/projeto-android/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-html">HTML</span><span class="ctag c-css">CSS</span></div>
+                    <div class="card-title" data-i18n="p_and">História do Android</div>
+                    <div class="card-desc"  data-i18n="p_and_d">Página educativa sobre a história do sistema Android.</div>
+                </div>
+            </div>
+
+            <div class="project-card reveal" data-category="html-css">
+                <div class="card-img">
+                    <img src="image/biasEstetica.png" alt="Landing Page Estética">
+                    <div class="card-overlay"><a href="https://bswbruno.github.io/bia-estetica/" target="_blank" data-i18n="card_view">↗ Ver Projeto</a></div>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-html">HTML</span><span class="ctag c-css">CSS</span></div>
+                    <div class="card-title" data-i18n="p_est">Landing Page Estética</div>
+                    <div class="card-desc"  data-i18n="p_est_d">Landing page para salão de estética e beleza.</div>
+                </div>
+            </div>
+
+            <!-- JAVA (Em Breve)
+                 Para adicionar projeto Java futuramente:
+                 1. Copie este bloco
+                 2. Remova as classes "card-soon" e o span "soon-badge"
+                 3. Preencha a imagem, link e textos do novo projeto
+            -->
+            <div class="project-card card-soon reveal" data-category="java">
+                <span class="soon-badge" data-i18n="soon">Em Breve</span>
+                <div class="card-img" style="background:linear-gradient(135deg,rgba(237,116,20,.08),rgba(237,116,20,.03));display:flex;align-items:center;justify-content:center">
+                    <span style="font-size:3.5rem">☕</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-tags"><span class="ctag c-java">Java</span></div>
+                    <div class="card-title" data-i18n="p_java">Projeto Java</div>
+                    <div class="card-desc"  data-i18n="p_java_d">Em desenvolvimento. Estou aprendendo Java e em breve trarei projetos aqui.</div>
+                </div>
+            </div>
+
+        </div><!-- /projects-grid -->
+    </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="habilidades">
+    <div class="container">
+        <div class="reveal">
+            <p class="section-label" data-i18n="sk_lbl">// habilidades</p>
+            <h2 class="section-title" data-i18n="sk_title">Minhas Tecnologias</h2>
+            <p class="section-sub" data-i18n="sk_sub">Ferramentas e linguagens que uso no dia a dia</p>
+        </div>
+        <div class="skills-grid">
+
+            <div class="skill-card reveal" data-skill="80">
+                <img src="image/icon-Html 5.png" alt="HTML5">
+                <div class="skill-name">HTML5</div>
+                <div class="bar-bg"><div class="bar-fill"></div></div>
+                <div class="bar-labels"><span data-i18n="lv_adv">Avançado</span><span>80%</span></div>
+            </div>
+
+            <div class="skill-card reveal" data-skill="80">
+                <img src="image/icon-CSS3.png" alt="CSS3">
+                <div class="skill-name">CSS3</div>
+                <div class="bar-bg"><div class="bar-fill"></div></div>
+                <div class="bar-labels"><span data-i18n="lv_adv">Avançado</span><span>80%</span></div>
+            </div>
+
+            <div class="skill-card reveal" data-skill="65">
+                <img src="image/icon-JavaScript.png" alt="JavaScript">
+                <div class="skill-name">JavaScript</div>
+                <div class="bar-bg"><div class="bar-fill"></div></div>
+                <div class="bar-labels"><span data-i18n="lv_int">Intermediário</span><span>65%</span></div>
+            </div>
+
+            <div class="skill-card reveal" data-skill="50">
+                <img src="image/icon-react.png" alt="React">
+                <div class="skill-name">React</div>
+                <div class="bar-bg"><div class="bar-fill"></div></div>
+                <div class="bar-labels"><span data-i18n="lv_int">Intermediário</span><span>50%</span></div>
+            </div>
+
+            <div class="skill-card reveal" data-skill="70">
+                <img src="image/icon-Figma.png" alt="Figma">
+                <div class="skill-name">Figma</div>
+                <div class="bar-bg"><div class="bar-fill"></div></div>
+                <div class="bar-labels"><span data-i18n="lv_int">Intermediário</span><span>70%</span></div>
+            </div>
+
+            <div class="skill-card reveal" data-skill="60">
+                <img src="image/icon-Adobe Photoshop.png" alt="Photoshop">
+                <div class="skill-name">Photoshop</div>
+                <div class="bar-bg"><div class="bar-fill"></div></div>
+                <div class="bar-labels"><span data-i18n="lv_int">Intermediário</span><span>60%</span></div>
+            </div>
+
+            <div class="skill-card reveal" data-skill="20">
+                <span class="skill-emoji">☕</span>
+                <div class="skill-name">Java</div>
+                <div class="bar-bg"><div class="bar-fill"></div></div>
+                <div class="bar-labels"><span data-i18n="lv_std">Estudando</span><span>20%</span></div>
+                <div class="studying-badge" data-i18n="lv_wip">⚡ Em estudo</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CONTACT MODAL ===================== -->
+<div class="modal-bg" id="modal">
+    <div class="modal-box">
+        <button class="modal-close" id="modal-close">✕</button>
+        <p class="section-label" data-i18n="mod_lbl">// entre em contato</p>
+        <h2 data-i18n="mod_title">Vamos Conversar!</h2>
+        <p class="modal-sub" data-i18n="mod_sub">Disponível para projetos e oportunidades</p>
+
+        <a href="https://wa.me/5521965969650" target="_blank" class="contact-item">
+            <span class="ci-icon">💬</span>
+            <div><span class="ci-lbl">WhatsApp</span><span>(21) 9659-69650</span></div>
+        </a>
+        <a href="mailto:wanderley.bruno@gmail.com" class="contact-item">
+            <span class="ci-icon">✉️</span>
+            <div><span class="ci-lbl">E-mail</span><span>wanderley.bruno@gmail.com</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank" class="contact-item">
+            <span class="ci-icon">💼</span>
+            <div><span class="ci-lbl">LinkedIn</span><span>wanderley-bruno</span></div>
+        </a>
+        <a href="https://github.com/wanderleybruno" target="_blank" class="contact-item">
+            <span class="ci-icon">⌨️</span>
+            <div><span class="ci-lbl">GitHub</span><span>wanderleybruno</span></div>
+        </a>
+    </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="image/MINHA LOGO NOBRU.DEV/MINHA LOGO NOBRU.DEV sem fundo letra white.png" alt="Nobru.Dev">
+                <p data-i18n="ft_bio">Desenvolvedor Front-End baseado no Rio de Janeiro, apaixonado por criar interfaces modernas, funcionais e memoráveis.</p>
+            </div>
+            <div class="footer-col">
+                <h5 data-i18n="ft_nav">Navegação</h5>
                 <ul>
-                    <li><a href="#sobre-mim">Sobre Mim</a></li>
-                    <li><a href="#menu-projetos">Portfólio</a></li>
-                    <li><a href="#experiencias">Experiências</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#inicio"      data-i18n="nav_home">Início</a></li>
+                    <li><a href="#sobre"       data-i18n="nav_about">Sobre</a></li>
+                    <li><a href="#projetos"    data-i18n="nav_proj">Projetos</a></li>
+                    <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Siga-nos</h4>
-                <p><a href="https://github.com/wanderleybruno" target="_blank">Github</a></p>
-                <p><a href="https://www.instagram.com/nobru_dev/" target="_blank">Instagram</a></p>
-                <p><a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">LinkedIn</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Entre em Contato</h4>
-                <form action="#">
-                    <input type="email" placeholder="Seu e-mail" required>
-                    <button type="submit">Enviar</button>
-                </form>
+            <div class="footer-col">
+                <h5 data-i18n="ft_social">Redes Sociais</h5>
+                <ul>
+                    <li><a href="https://github.com/wanderleybruno" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/nobru_dev/" target="_blank">Instagram</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 Nobru.Dev. Todos os direitos reservados.</p>
-            <p>Desenvolvido por <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">Bruno dos Santos / Nobru.Dev</a></p>
+            <span data-i18n="ft_copy">© 2025 Nobru.Dev — Todos os direitos reservados.</span>
+            <span>Desenvolvido com ❤️ por <a href="https://www.linkedin.com/in/wanderley-bruno/" target="_blank">Bruno Santos</a></span>
         </div>
-    </footer>
-    
-    
-  
+    </div>
+</footer>
 
- 
+<button id="scroll-top" title="Voltar ao topo">↑</button>
 
-
-    <script src="script/script.js"></script>
+<script src="script/script.js"></script>
 </body>
-
 </html>
