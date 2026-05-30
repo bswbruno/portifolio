@@ -21,6 +21,7 @@ const T = {
     f_all:"Todos", f_html:"HTML / CSS", f_js:"JavaScript", f_react:"React", f_java:"Java",
     card_view:"↗ Ver Projeto",
     soon:"Em Breve",
+    p_sort:"Sorteio PRO",              p_sort_d:"Sistema de Sorteio personalizado, primeiro projeto feito com ajuda do Claude",
     p_bias:"Site Estética v.2",        p_bias_d:"Site moderno para estúdio de estética com design profissional.",
     p_colab:"Plataforma Colaborativa", p_colab_d:"Plataforma web colaborativa com interface interativa e dinâmica.",
     p_cham:"Site de Chamados",         p_cham_d:"Sistema de gerenciamento de chamados e suporte técnico.",
