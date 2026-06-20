@@ -34,7 +34,7 @@ const T = {
     p_java:"Projeto Java",             p_java_d:"Em desenvolvimento. Estou aprendendo Java e em breve trarei projetos aqui.",
     sk_lbl:"// habilidades", sk_title:"Minhas Tecnologias",
     sk_sub:"Ferramentas e linguagens que uso no dia a dia",
-    lv_adv:"Avançado", lv_int:"Intermediário", lv_std:"Estudando", lv_wip:"⚡ Em estudo",
+    lv_adv:"Avançado", lv_int:"Intermediário", lv_std:"⚡ Em estudo", lv_wip:"", lv_bas:"Básico",
     mod_lbl:"// entre em contato", mod_title:"Vamos Conversar!",
     mod_sub:"Disponível para projetos e oportunidades",
     ft_bio:"Desenvolvedor Front-End baseado no Rio de Janeiro, apaixonado por criar interfaces modernas, funcionais e memoráveis.",
