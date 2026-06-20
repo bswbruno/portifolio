@@ -512,6 +512,7 @@ header {
 .c-react { background:rgba(97,218,251,.15);  color:#61dafb; }
 .c-java  { background:rgba(237,116,20,.15);  color:#ed7414; }
 .c-claude{ background:rgba(233, 131, 47, 0.24);  color:#c75c05; }
+.c-chrome{ background: rgba(244, 179, 0, 0.349) ; color: rgba(244, 180, 0, 1.0);}
 
 
 .card-title { font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; margin-bottom:.35rem; }

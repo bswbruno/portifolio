@@ -18,7 +18,7 @@ const T = {
     tag_java:"Java (Estudando)",
     proj_lbl:"// meus projetos", proj_title:"Portfólio",
     proj_sub:"Projetos acadêmicos e pessoais — filtre por tecnologia",
-    f_all:"Todos", f_html:"HTML / CSS", f_js:"JavaScript", f_react:"React", f_java:"Java",
+    f_all:"Todos", f_html:"HTML / CSS", f_js:"JavaScript", f_react:"React",f_chrome:"Chrome extension", f_java:"Java",
     card_view:"↗ Ver Projeto",
     soon:"Em Breve",
     p_sort:"Sorteio PRO",              p_sort_d:"Sistema de Sorteio personalizado, primeiro projeto feito com ajuda do Claude",
@@ -40,7 +40,7 @@ const T = {
     ft_bio:"Desenvolvedor Front-End baseado no Rio de Janeiro, apaixonado por criar interfaces modernas, funcionais e memoráveis.",
     ft_nav:"Navegação", ft_social:"Redes Sociais",
     ft_copy:"© 2025 Nobru.Dev — Todos os direitos reservados.",
-    typing:["Full-Stack","Designer","Criativo"]
+    typing: ["Frontend", "Backend", "Fullstack"]
   },
   en:{
     nav_home:"HOME", nav_about:"ABOUT", nav_proj:"PROJECTS",
@@ -202,9 +202,16 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+
     const f = btn.dataset.filter;
+
     document.querySelectorAll('.project-card').forEach(card => {
-      card.style.display = (f === 'all' || card.dataset.category === f) ? '' : 'none';
+      const categories = card.dataset.category.split(' ');
+
+      card.style.display =
+        (f === 'all' || categories.includes(f))
+          ? ''
+          : 'none';
     });
   });
 });
