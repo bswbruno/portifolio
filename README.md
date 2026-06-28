@@ -1,4 +1,4 @@
-# 🚀 Portfólio Pessoal — Bruno
+# 🚀 Portfólio Pessoal — BrunO.
 
 Bem-vindo ao meu portfólio profissional!  
 Este projeto foi desenvolvido para apresentar minhas habilidades, projetos e experiências como desenvolvedor.
